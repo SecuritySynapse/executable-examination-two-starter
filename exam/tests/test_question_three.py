@@ -40,6 +40,7 @@ def example_function():
     x = 10
     if x > 5:
         x = 5
+        example = "print x is greater than 5"
 """
 
 source_code_two_one_while = """
