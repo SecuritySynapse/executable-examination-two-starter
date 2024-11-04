@@ -105,7 +105,7 @@ def count_words_cryptanalysis(text):
 # The function count_spaces_and_newlines_cryptanalysis should:
 # --> Take as input the parameter:
 #     text: a string that represents the text to be analyzed
-# --> Produce as output a dictionary that contains the following key value pairs:
+# --> Produce as output a dictionary that contains the following key-value pairs:
 #    - The key is "spaces" and the value is the number of spaces found in the text
 #    - The key is "newlines" and the value is the number of newlines found in the text
 
