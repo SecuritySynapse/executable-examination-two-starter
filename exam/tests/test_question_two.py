@@ -156,15 +156,14 @@ def test_apply_decryption_methods_singleton_list():
     ciphertext = "nop"
     expected_plaintext = "abc"
     decryption_functions = [rot13_encrypt]  # ROT13 is its own inverse
-    result = apply_encryption_methods(decryption_functions, ciphertext)
+    result = apply_decryption_methods(decryption_functions, ciphertext)
     assert (
         result == expected_plaintext
     ), f"Expected {expected_plaintext} but got {result} after applying ROT13"
-
     ciphertext = "mlk"
     expected_plaintext = "nop"
     decryption_functions = [encrypt_atbash_cipher]  # Atbash is its own inverse
-    result = apply_encryption_methods(decryption_functions, ciphertext)
+    result = apply_decryption_methods(decryption_functions, ciphertext)
     assert (
         result == expected_plaintext
     ), f"Expected {expected_plaintext} but got {result} after applying Atbash"
@@ -179,7 +178,7 @@ def test_apply_decryption_methods_combined_list():
         encrypt_atbash_cipher,
         rot13_encrypt,
     ]  # Reverse order of encryption
-    result = apply_encryption_methods(decryption_functions, ciphertext)
+    result = apply_decryption_methods(decryption_functions, ciphertext)
     assert (
         result == expected_plaintext
-    ), f"Expected {expected_plaintext} but got {result} after applying ROT13+Atbash"
+    ), f"Expected {expected_plaintext} but got {result} after applying Atbash+ROT13"
