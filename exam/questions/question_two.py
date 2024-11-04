@@ -194,7 +194,7 @@ def decrypt_transposition_cipher(key, message):
 # so that this function is correctly documented by an software engineer using it.
 
 
-def rot13_encrypt(plaintext: str) -> str:
+def rot13_encrypt(plaintext):
     """Encrypt the provided plaintext using the ROT13 cipher."""
     result = ""
     for char in plaintext:
@@ -202,7 +202,7 @@ def rot13_encrypt(plaintext: str) -> str:
     return result
 
 
-def rot13_decrypt(ciphertext: str) -> str:
+def rot13_decrypt(ciphertext):
     """Decrypt the provided ciphertext using the ROT13 cipher."""
     result = ""
     for char in ciphertext:
@@ -248,16 +248,12 @@ def rot13_decrypt(ciphertext: str) -> str:
 # so that this function is correctly documented by an software engineer using it.
 
 
-def apply_encryption_methods(
-    functions: List[Callable[[str], str]], plaintext: str
-) -> str:
+def apply_encryption_methods(functions, plaintext):
     """Apply a list of encryption functions to the plaintext in the specified order."""
     return ""
 
 
-def apply_decryption_methods(
-    functions: List[Callable[[str], str]], ciphertext: str
-) -> str:
+def apply_decryption_methods(functions, ciphertext):
     """Apply a list of decryption functions to the ciphertext in the reverse order."""
     return ""
 
