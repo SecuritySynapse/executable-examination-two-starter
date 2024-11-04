@@ -21,7 +21,7 @@
 
 # }}}
 
-# Question (a) {{{
+# Part (a) {{{
 
 # Instructions: Implement and/or debug the following functions so that they
 # adheres to all aspects of the following specification.
